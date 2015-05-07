@@ -31,8 +31,8 @@ class MyWindowClass(QMainWindow, form_class):
         self.resultsBrowser.setAllColumnsShowFocus(True)
         self.resultsBrowser.setSortingEnabled(True)
         self.resultsBrowser.setColumnWidth(search.headers["Name"],400)
-        self.resultsBrowser.hideColumn(search.headers["Description"]) # Hide url column
-        self.resultsBrowser.hideColumn(search.headers["Download"])
+        #self.resultsBrowser.hideColumn(search.headers["Description"]) # Hide url column
+        #self.resultsBrowser.hideColumn(search.headers["Download"])
         #self.resultsBrowser.hideColumn(search.headers["Category"])
 
         self.combo_searchcateg.addItems(search.categories)
