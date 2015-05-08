@@ -37,9 +37,8 @@ class TorrentzSearch():
     def __init__(self):
         pass
         
-    def search_now(self,query_Obj):
+    def search_now(self,query_Obj,pages=1):
         query = urllib.parse.quote(query_Obj.search_String)
-        pages = 1
         
         full_results = list()
         for page_no in range(pages):
@@ -56,7 +55,7 @@ class TorrentzSearch():
             
             parsed_results = MyParser.Parse_Page(response)
             filtered_results = parsed_results
-            #filtered_results = self.filter_categories(parsed_results,categ)
+            
             full_results.extend(filtered_results)
             
         return full_results
